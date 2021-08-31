@@ -13,24 +13,3 @@
 
 }
 
-
-
-.header{
-  grid-area: h;
-  background-color: green;
-}
-
-.header img {
-  width: 20px;
-
-}
-
-.nav {
-  grid-area: n;
-  background-color: rgb(206, 181, 149);
-}
-
-.content {
-  grid-area: c;
-  background-color: aquamarine;
-}
