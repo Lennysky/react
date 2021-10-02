@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Navbar.module.css'
-console.log(classes);
+import {NavLink} from "react-router-dom";
+//console.log(classes);
 
 /* Объяснение верхнего объекта classes с его свойствами и значениями
 let classes = {
@@ -18,26 +19,26 @@ let classes = {
 // let classessNew = `${class1.item} ${class2.active}`;
 
 
-
-
 const Navbar = () => {
-    return <nav className = {classes.nav}>
-    <div className = {classes.item}>
-      <a>Profile</a>
-    </div>
-    <div className = {`${classes.item} ${classes.active}`}>
-      <a>Messages</a>
-    </div>
-    <div className = {classes.item}>
-      <a>News</a>
-    </div>
-    <div className = {classes.item}>
-      <a>Music</a>
-    </div>
-    <div className = {classes.item}>
-      <a>Settings</a>
-    </div>
-  </nav>
+    return (
+        <nav className={classes.nav}>
+            <div className={classes.item}>
+                <NavLink to="/profile" activeClassName={classes.active}>Profile</NavLink>
+            </div>
+            <div className={`${classes.item} ${classes.active}`}>
+                <NavLink to="/dialogs" activeClassName={classes.active}>Messages</NavLink>
+            </div>
+            <div className={classes.item}>
+                <NavLink to="/news" activeClassName={classes.active}>News</NavLink>
+            </div>
+            <div className={classes.item}>
+                <NavLink to="/music" activeClassName={classes.active}>Music</NavLink>
+            </div>
+            <div className={classes.item}>
+                <NavLink to="/settings" activeClassName={classes.active}>Settings</NavLink>
+            </div>
+        </nav>
+    )
 }
 
 export default Navbar;
